@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #02060a;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.home-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at center, #0a1118 0%, #02060a 100%);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.home-logo {
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffb300;
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #ffb300;
+  border-radius: 20px;
+  background: rgba(255, 179, 0, 0.1);
+}
+
+.home-header h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.home-header p {
+  color: #8c9ea8;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-cards {
+  display: flex;
+  gap: 30px;
+  max-width: 960px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 320px;
+  max-width: 450px;
+  background: #080f18;
+  border: 1px solid #1a2a3a;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.safepath-card::before {
+  background: #00e676;
+}
+.safepath-card:hover {
+  transform: translateY(-5px);
+  border-color: #00e676;
+  box-shadow: 0 10px 30px rgba(0, 230, 118, 0.15);
+}
+
+.safesphere-card::before {
+  background: #1565c0;
+}
+.safesphere-card:hover {
+  transform: translateY(-5px);
+  border-color: #1565c0;
+  box-shadow: 0 10px 30px rgba(21, 101, 192, 0.2);
+}
+
+.card-icon {
+  font-size: 48px;
+  text-align: center;
+  padding: 30px 0 10px;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+.card-content {
+  padding: 0 30px 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.feature-card h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card-badge {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: center;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.card-badge.threat { background: rgba(0, 230, 118, 0.1); color: #00e676; border: 1px solid rgba(0, 230, 118, 0.3); }
+.card-badge.disaster { background: rgba(21, 101, 192, 0.1); color: #42a5f5; border: 1px solid rgba(21, 101, 192, 0.3); }
+
+.feature-card p {
+  color: #8c9ea8;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card-features {
+  list-style: none;
+  margin: 0 0 30px 0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #b8cfe0;
+  background: rgba(0,0,0,0.3);
+  padding: 16px;
+  border-radius: 8px;
+}
+.card-features li {
+  margin-bottom: 8px;
+}
+.card-features li:last-child {
+  margin-bottom: 0;
+}
+
+.card-btn {
+  margin-top: auto;
+  text-align: center;
+  padding: 12px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+}
+
+.safepath-card .card-btn { background: rgba(0, 230, 118, 0.1); color: #00e676; border: 1px solid #00e676; }
+.safepath-card:hover .card-btn { background: #00e676; color: #000; }
+
+.safesphere-card .card-btn { background: rgba(21, 101, 192, 0.15); color: #42a5f5; border: 1px solid #42a5f5; }
+.safesphere-card:hover .card-btn { background: #1565c0; color: #fff; border-color: #1565c0; }
+
+.home-footer {
+  margin-top: auto;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #2d4a5e;
+  padding-top: 40px;
+}
+
+.about-section {
+  max-width: 1000px;
+  width: 100%;
+  margin: 60px auto 20px;
+  padding: 40px;
+  background: rgba(8, 15, 24, 0.6);
+  border: 1px solid #1a2a3a;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+.about-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 24px;
+  color: #8c9ea8;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 15px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.about-card {
+  background: rgba(0,0,0,0.3);
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.about-card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #42a5f5;
+  letter-spacing: 1px;
+}
+
+.about-card p {
+  color: #b8cfe0;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about-card ul {
+  padding-left: 20px;
+  color: #b8cfe0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.about-card li {
+  margin-bottom: 8px;
+}
+
+.about-card strong {
+  color: #fff;
+}
+
+.about-card em {
+  color: #ffb300;
+  font-style: normal;
+}
+
+.formula-box {
+  background: #02060a;
+  border: 1px solid #1a2a3a;
+  border-left: 3px solid #00e676;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #00e676;
+}
+
+.architecture-diagram {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 20px auto 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
